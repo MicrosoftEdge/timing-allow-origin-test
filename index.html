@@ -1,0 +1,21 @@
+<doctype html>
+<html lang="en">
+<body>
+<pre id="display"></pre>
+<script src="http://localhost:8002/script.js"></script>
+<script>
+function log(str) {
+  document.getElementById('display').innerHTML += str + '\n'
+}
+  
+addEventListener('load', () => {
+  log(JSON.stringify(performance.getEntriesByType('resource').map(_ => ({connectStart: _.connectStart, name: _.name})), null, '  '))
+  if (performance.getEntriesByType('resource')[0].connectStart === 0) {
+    log('\n\u2716 Test failed! connectStart should be >0')
+  } else {
+    log('\n\u2714 Test passed! connectStart is >0')
+  }
+})
+</script>
+</body>
+</html>
