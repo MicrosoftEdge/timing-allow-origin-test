@@ -3,6 +3,8 @@ Timing-Allow-Origin test
 
 This demonstrates using Timing-Allow-Origin with space-separated origins. To run the test:
 
+    git clone https://github.com/MicrosoftEdge/timing-allow-origin-test.git
+    cd timing-allow-origin-test
     npm install
     npm start
 
