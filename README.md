@@ -9,3 +9,9 @@ This demonstrates using Timing-Allow-Origin with space-separated origins. To run
     npm start
 
 Then open up `http://localhost:8000` and `http://localhost:8001` in a browser.
+
+### Initial results
+
+* Chrome 51: passes
+* Edge 14: passes
+* Firefox 49: fails
